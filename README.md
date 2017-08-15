@@ -83,7 +83,7 @@ npm 发布了 5.0 版本，提供了自动记录依赖树，下载使用强校�
 
 ![npm5-vs-yarn](/git-img/npm5-vs-yarn.png)
 
-**参考资料：[Here’s what you need to know about npm 5](https://blog.pusher.com/what-you-need-know-npm-5/)
+**参考资料：[Here’s what you need to know about npm 5](https://blog.pusher.com/what-you-need-know-npm-5/)**
 
 
 ## 缓存
