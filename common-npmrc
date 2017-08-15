@@ -1,0 +1,6 @@
+save=true
+init-license=MIT
+scope=@xfe
+save-exact=true
+loglevel=http
+prefer-offline=true

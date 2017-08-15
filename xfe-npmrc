@@ -1,0 +1,5 @@
+registry=http://npm-registry.seasungame.com/
+save=true
+scope=@xfe
+loglevel=http
+prefer-offline=true
