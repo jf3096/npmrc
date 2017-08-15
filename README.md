@@ -1,6 +1,6 @@
 # npmrc
 
-> npm 配置文件集
+> 分析 npm 存在的问题，提出解决方案，统一使用 npmrc 文件规范 npm
 
 NPM 是随同 NodeJS 一起安装的包管理工具，能解决 NodeJS 代码部署上的很多问题，常见的使用场景有以下几种：
 
@@ -109,22 +109,26 @@ TTL 和 每一个服务器的缓存处理时间并不会特别大，这里可以
 在日常开发中，由于前端团队使用的技术近似，那么某种意义来说，局域网的 npm 服务器就能充当一个缓存共享服务器，一次拉取，局域网缓存，方便你我他。
 
 ## 离线缓存
-在npm 5 中 --cached-min 和 --cached-max 被 --prefer-online和--prefer-offline取代。
+在npm 5 中 **--cached-min** 和 **--cached-max** 被 **--prefer-online** 和 **--prefer-offline** 取代。
 
 --prefer-offline: 本地有缓存用缓存，无缓存，网络拉取。
 --prefer-online: 优先网络拉取，无网络时使用本地缓存。
 
 假设我们需要下载express的包，在无本地缓存的情况下无区别，那么我们探讨一下在缓存下使用--prefer-offline， --prefer-online 和默认 npm install 的区别。
 
-分别使用：(--loglevel http 能输出http或以上的log)
 npm install express
+
 npm install express --prefer-online
+
 npm install express --prefer-offline
+
 
 ![installation](/git-img/installation.png)
 
 default（默认)：1.868s
+
 --prefer-online：2.343s
+
 --prefer-offline：1.112s
 
 在多次分析中也能发现，在默认安装下速度居中，通过npm 参数 --loglevel http 可以分析出：
